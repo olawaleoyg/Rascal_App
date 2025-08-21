@@ -1,0 +1,28 @@
+trigger-global-pipeline:
+  trigger:
+    include: gitlab-ci-jobs/global.yml
+  rules:
+    - changes:
+        - global-infra/**/*
+        - global-infra/global/global.tfvars
+        - gitlab-ci-jobs/global.yml
+
+
+# trigger-kubernetes-pipeline:
+#   trigger:
+#     include: gitlab-ci-jobs/kubernetes.yml
+#   rules:
+#     - changes:
+#         - eks-cluster/environment/kubernetes.tfvars
+#         - eks-cluster/**/*
+#         - gitlab-ci-jobs/kubernetes.yml
+
+
+# trigger-kafka-pipeline:
+#   trigger:
+#     include: gitlab-ci-jobs/kafka.yml
+#   rules:
+#     - changes:
+#         - kafka/**/*
+#         - gitlab-ci-jobs/kafka.yml
+
