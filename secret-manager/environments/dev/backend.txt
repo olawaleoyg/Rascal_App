@@ -1,0 +1,4 @@
+bucket = "samanja-terraform-state-file"
+key    = "dev-secret/dev-terraform.tfstate"
+region = "eu-west-2"
+encrypt = true

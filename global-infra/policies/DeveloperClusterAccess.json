@@ -1,0 +1,28 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "eks:Describe*",
+                "eks:List*",
+                "eks:Connect"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Deny",
+            "Action": [
+                "eks:DeleteCluster",
+                "eks:UpdateClusterConfig",
+                "eks:UpdateClusterVersion",
+                "eks:UpdateNodegroupConfig",
+                "eks:UpdateNodegroupVersion",
+                "eks:CreateCluster",
+                "eks:CreateNodegroup",
+                "eks:DeleteNodegroup"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
